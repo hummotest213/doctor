@@ -1,51 +1,64 @@
-// Static admin credentials - Change these values for your setup
-export const ADMIN_CREDENTIALS = {
-  username: 'admin',
-  password: 'admin123',
+import axios from 'axios';
+
+// Backend API authentication
+const getBackendUrl = () => {
+  return process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000/api';
 };
 
-// Generate a simple token (client-side only)
-export const generateToken = (): string => {
-  return btoa(`${Date.now()}-admin-token`);
-};
+interface LoginResponse {
+  data: {
+    token: string;
+    user: {
+      id: string;
+      email: string;
+      role: string;
+    };
+  };
+}
 
-// Verify credentials
-export const verifyCredentials = (username: string, password: string): boolean => {
-  return (
-    username === ADMIN_CREDENTIALS.username &&
-    password === ADMIN_CREDENTIALS.password
-  );
+// Login with backend API
+export const loginWithBackend = async (email: string, password: string): Promise<LoginResponse> => {
+  const response = await axios.post<LoginResponse>(`${getBackendUrl()}/auth/login`, {
+    email,
+    password,
+  });
+  return response.data;
 };
 
 // Check if user is authenticated
 export const isAuthenticated = (): boolean => {
   if (typeof window === 'undefined') return false;
-  const token = localStorage.getItem('admin_token');
-  const expiresAt = localStorage.getItem('admin_token_expires');
+  const token = localStorage.getItem('adminToken');
+  const expiresAt = localStorage.getItem('adminTokenExpires');
 
   if (!token || !expiresAt) return false;
 
   // Check if token has expired
   if (new Date().getTime() > parseInt(expiresAt)) {
-    localStorage.removeItem('admin_token');
-    localStorage.removeItem('admin_token_expires');
+    localStorage.removeItem('adminToken');
+    localStorage.removeItem('adminTokenExpires');
     return false;
   }
 
   return true;
 };
 
-// Set authentication token (24 hour expiration)
-export const setAuthToken = (): void => {
-  const token = generateToken();
-  const expiresAt = new Date().getTime() + 24 * 60 * 60 * 1000; // 24 hours
+// Set authentication token (7 day expiration to match JWT)
+export const setAuthToken = (token: string): void => {
+  const expiresAt = new Date().getTime() + 7 * 24 * 60 * 60 * 1000; // 7 days
 
-  localStorage.setItem('admin_token', token);
-  localStorage.setItem('admin_token_expires', expiresAt.toString());
+  localStorage.setItem('adminToken', token);
+  localStorage.setItem('adminTokenExpires', expiresAt.toString());
+};
+
+// Get current token
+export const getAuthToken = (): string | null => {
+  if (typeof window === 'undefined') return null;
+  return localStorage.getItem('adminToken');
 };
 
 // Clear authentication
 export const clearAuthToken = (): void => {
-  localStorage.removeItem('admin_token');
-  localStorage.removeItem('admin_token_expires');
+  localStorage.removeItem('adminToken');
+  localStorage.removeItem('adminTokenExpires');
 };
