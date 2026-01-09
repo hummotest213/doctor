@@ -118,8 +118,9 @@ model Blog {
   slug         String      @unique
   featuredImage String?
   author       String?
+  title        String
+  content      String      @db.Text
   views        Int         @default(0)
-  translations Translation[]
   createdAt    DateTime    @default(now())
   updatedAt    DateTime    @updatedAt
 
