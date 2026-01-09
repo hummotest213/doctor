@@ -31,11 +31,11 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   useEffect(() => {
     const loadTranslations = async () => {
       try {
-        // Get API URL (works for both local and production)
-        const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+        // Get API URL from environment - use new Render backend
+        const apiBaseUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000';
         
         // Try to fetch from backend first
-        const response = await fetch(`${apiBaseUrl}/languages/${language}`);
+        const response = await fetch(`${apiBaseUrl}/api/languages/${language}`);
         if (response.ok) {
           const data = await response.json();
           // Check if we got actual data (not empty object)

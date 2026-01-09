@@ -17,7 +17,7 @@ interface ServicesSectionProps {
 }
 
 const ServicesSection: React.FC<ServicesSectionProps> = ({ language, showAlert }) => {
-  const API_URL = 'https://server.ginekoloqayten.online/api';
+  const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000';
 
   const [services, setServices] = useState<ServicesService[]>([]);
   const [showModal, setShowModal] = useState(false);

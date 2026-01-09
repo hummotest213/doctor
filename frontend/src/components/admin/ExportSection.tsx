@@ -8,7 +8,7 @@ interface ExportSectionProps {
 }
 
 const ExportSection: React.FC<ExportSectionProps> = ({ language, showAlert }) => {
-  const API_URL = 'https://server.ginekoloqayten.online/api';
+  const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000';
 
   const handleExportData = async () => {
     try {
