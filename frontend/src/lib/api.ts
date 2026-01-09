@@ -3,7 +3,18 @@
  * Centralized API calls to backend
  */
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const getApiBaseUrl = () => {
+  let url = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000';
+  
+  // Ensure URL ends with /api
+  if (!url.endsWith('/api')) {
+    url = url.endsWith('/') ? url + 'api' : url + '/api';
+  }
+  
+  return url;
+};
+
+const API_BASE_URL = getApiBaseUrl();
 
 // ============== TYPES ==============
 export interface Hero {

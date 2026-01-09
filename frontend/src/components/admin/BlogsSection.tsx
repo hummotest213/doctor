@@ -17,7 +17,14 @@ interface BlogsSectionProps {
 }
 
 const BlogsSection: React.FC<BlogsSectionProps> = ({ language, showAlert }) => {
-  const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000';
+  const getApiUrl = () => {
+    let url = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000';
+    if (!url.endsWith('/api')) {
+      url = url.endsWith('/') ? url + 'api' : url + '/api';
+    }
+    return url;
+  };
+  const API_URL = getApiUrl();
 
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [showModal, setShowModal] = useState(false);

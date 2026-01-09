@@ -8,7 +8,14 @@ interface ExportSectionProps {
 }
 
 const ExportSection: React.FC<ExportSectionProps> = ({ language, showAlert }) => {
-  const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000';
+  const getApiUrl = () => {
+    let url = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000';
+    if (!url.endsWith('/api')) {
+      url = url.endsWith('/') ? url + 'api' : url + '/api';
+    }
+    return url;
+  };
+  const API_URL = getApiUrl();
 
   const handleExportData = async () => {
     try {
@@ -63,7 +70,7 @@ const ExportSection: React.FC<ExportSectionProps> = ({ language, showAlert }) =>
       <div style={{ marginTop: '30px', padding: '15px', background: '#d1ecf1', borderRadius: '4px', border: '1px solid #bee5eb' }}>
         <h4 style={{ color: '#0c5460', marginBottom: '10px' }}>API Əsas Ünvan:</h4>
         <p style={{ color: '#0c5460', fontSize: '13px', fontFamily: 'monospace' }}>
-          https://server.ginekoloqayten.online/api
+          {process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000'}/api
         </p>
       </div>
 
