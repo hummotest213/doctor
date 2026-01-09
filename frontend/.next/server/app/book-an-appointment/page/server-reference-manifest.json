@@ -1,0 +1,20 @@
+{
+  "node": {
+    "40b5e26531bb57dc9cc65071b1cf7a415a56f411ed": {
+      "workers": {
+        "app/book-an-appointment/page": {
+          "moduleId": 46088,
+          "async": false,
+          "exportedName": "handleAppointment",
+          "filename": "OneDrive/Pictures/testing-server/frontend/src/actions/appointment.ts"
+        }
+      },
+      "layer": {
+        "app/book-an-appointment/page": "action-browser"
+      },
+      "exportedName": "handleAppointment",
+      "filename": "OneDrive/Pictures/testing-server/frontend/src/actions/appointment.ts"
+    }
+  },
+  "edge": {}
+}

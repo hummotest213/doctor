@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/book-an-appointment/layout,_N_T_/book-an-appointment/page,_N_T_/book-an-appointment/"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/book-an-appointment/__PAGE__",
+    "/book-an-appointment",
+    "/_index",
+    "/_head"
+  ]
+}

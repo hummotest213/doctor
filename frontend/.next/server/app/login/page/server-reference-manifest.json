@@ -1,0 +1,20 @@
+{
+  "node": {
+    "4067624da39579652cce69eb2c884ff04b96220327": {
+      "workers": {
+        "app/login/page": {
+          "moduleId": 25542,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_ACTION_0",
+          "filename": "OneDrive/Pictures/testing-server/frontend/src/components/Auth/LoginForm.tsx"
+        }
+      },
+      "layer": {
+        "app/login/page": "rsc"
+      },
+      "exportedName": "$$RSC_SERVER_ACTION_0",
+      "filename": "OneDrive/Pictures/testing-server/frontend/src/components/Auth/LoginForm.tsx"
+    }
+  },
+  "edge": {}
+}

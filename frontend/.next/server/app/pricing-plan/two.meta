@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/pricing-plan/layout,_N_T_/pricing-plan/two/layout,_N_T_/pricing-plan/two/page,_N_T_/pricing-plan/two/"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/pricing-plan/two/__PAGE__",
+    "/pricing-plan/two",
+    "/pricing-plan",
+    "/_index",
+    "/_head"
+  ]
+}

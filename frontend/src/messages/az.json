@@ -1,0 +1,312 @@
+{
+  "nav": {
+    "home": "Ana Səhifə",
+    "aboutUs": "Haqqımda",
+    "services": "Xidmətlər",
+    "bookAppointment": "Görüş Təyin Et",
+    "blog": "Bloq",
+    "contact": "Əlaqə"
+  },
+  "hero": {
+    "trustpilot": "Trustpilot",
+    "reviews": "10k+ Pasient Rəyi",
+    "title": "Dr. Aytən Abdullayeva",
+    "titleHighlight": "Onkoloq-Ginekoloq, Tibb üzrə Fəlsəfə Doktoru",
+    "titleEnd": "",
+    "description": "Qadın sağlamlığının keşiyində: Onkoloji xəstəliklərin erkən diaqnostikası, uşaqlıq boyu patologiyalarının müalicəsi və müasir laparoskopik cərrahiyyə.",
+    "registerButton": "Növbəyə yazıl",
+    "registerFree": "",
+    "membersTreated": "Uğurlu Əməliyyatlar",
+    "virtualPatients": "Razı Pasientlər",
+    "licensedDoctors": "İllik Təcrübə"
+  },
+  "services": {
+    "subtitle": "Xidmətlərim",
+    "title": "Qadın Sağlamlığı üçün Peşəkar Yanaşma",
+    "description": "Erkən diaqnoz həyat qurtarır. Onkoloji və ginekoloji problemlərinizin həlli üçün müasir tibbi protokollara əsaslanan xidmətlər təklif edirəm.",
+    "viewMore": "Bütün Xidmətlər",
+    "learnMore": "Ətraflı",
+    "exploreMore": "Profilaktik müayinə metodları ilə tanış olun",
+    "generalCare": {
+      "cancerScreening": {
+        "title": "Onkoloji Skrinninq",
+        "description": "Xərçəngönü vəziyyətlərin və erkən mərhələ şişlərin vaxtında aşkar edilməsi üçün mütəxəssis müayinəsi.",
+        "features": [
+          "Pap-smear testi",
+          "HPV skrinninqi",
+          "Uşaqlıq boyu kolposkopiyası",
+          "Genetik meyillilik testləri"
+        ]
+      },
+      "surgicalOncology": {
+        "title": "Cərrahi Müalicə",
+        "description": "Reproduktiv sistemin bədxassəli şişlərinin ən müasir laparoskopik və açıq cərrahi üsullarla xaric edilməsi.",
+        "features": [
+          "Histerektomiya (Uşaqlığın kəsilməsi)",
+          "Laparoskopik cərrahiyyə",
+          "Limfa düyünlərinin disseksiyası",
+          "Fertilliyi qoruyan əməliyyatlar"
+        ]
+      },
+      "cervicalHealth": {
+        "title": "Uşaqlıq Boyu Sağlamlığı",
+        "description": "Uşaqlıq boyu patologiyalarının, displaziyaların və xərçəngin kompleks diaqnostikası və müalicəsi.",
+        "features": [
+          "Displaziya müalicəsi",
+          "Leep/Konizasiya prosedurları",
+          "Eroziyaların kriodestruksiyası",
+          "Histoloji analizlərin qiymətləndirilməsi"
+        ]
+      },
+      "ovarianAndUterineCare": {
+        "title": "Yumurtalıq və Uşaqlıq Xəstəlikləri",
+        "description": "Yumurtalıq kistaları, uşaqlıq miomaları və endometriumun onkoloji risklərinin idarə edilməsi.",
+        "features": [
+          "Yumurtalıq xərçəngi nəzarəti",
+          "Endometrial biopsiya",
+          "Miomaların onkoloji differensiasiyası",
+          "Şiş markerlərinin (CA-125) analizi"
+        ]
+      },
+      "chemoFollowUp": {
+        "title": "Post-Op və Kimyaterapiya Nəzarəti",
+        "description": "Müalicə alan xəstələrin dinamik müşahidəsi və yan təsirlərin minimuma endirilməsi.",
+        "features": [
+          "Kimyaterapiya sonrası monitorinq",
+          "Residivlərin (təkrarın) qarşısının alınması",
+          "Reabilitasiya planı",
+          "Ağrının idarə edilməsi"
+        ]
+      },
+      "hormonalSupport": {
+        "title": "Hormonal və Dəstəkləyici Terapiya",
+        "description": "Onkoloji müalicələr zamanı hormonal balansın qorunması və dərman təminatının izlənilməsi.",
+        "features": [
+          "Hormon-əvəzedici terapiya",
+          "İmmunomodulyatorlar",
+          "Osteoporozun profilaktikası",
+          "Vitamin və mineral dəstəyi"
+        ]
+      }
+    }
+  },
+  "feedback": {
+  "subtitle": "Pasient rəyləri",
+  "title": "Niyə Dr. Aytən Abdullayevaya etibar edirlər?",
+  "viewAll": "Bütün rəylər",
+  "testimonials": [
+    {
+      "name": "Dilşad Abbasova",
+      "location": "Bakı",
+      "text": "Açığı çox qorxmuşdum. Müayinəyə gedəndə heç nə gözləmirdim. Aytən xanım hər şeyi sakit-sakit izah etdi, mənə psixoloji olaraq da çox kömək oldu. Xəstəlik erkən aşkarlandı, indi hər şey qaydasındadır, şükür."
+    },
+    {
+      "name": "Günel Əliyeva",
+      "location": "Gəncə",
+      "text": "Laparoskopik əməliyyat oldum. Düzü bu qədər rahat keçəcəyini düşünmürdüm. Əməliyyatdan sonra tez ayağa qalxdım. Həkim çox diqqətlidir, sual verəndə heç vaxt tələsmir."
+    },
+    {
+      "name": "Nərgiz Həsənova",
+      "location": "Sumqayıt",
+      "text": "Risk qrupunda olduğuma görə mütəmadi müayinələrə gedirəm. Aytən xanım hər dəfə diqqətlə baxır, xırda detalları da qaçırmır. Özümü güvəndə hiss edirəm, bu mənim üçün çox önəmlidir."
+    }
+  ]
+},
+  "blog": {
+    "subtitle": "Bloq",
+    "title": "Qadın Onkologiyası Haqqında Faydalı Məlumatlar",
+    "description": "Maariflənmək və onkoloji xəstəliklərdən qorunmaq üçün mütəxəssis məsləhətlərini oxuyun.",
+    "posts": [
+      {
+        "category": "Profilaktika",
+        "date": "10 Yanvar, 2026",
+        "title": "HPV Peyvəndi: Uşaqlıq Boyu Xərçəngindən Qorunma Yolları"
+      },
+      {
+        "category": "Diaqnostika",
+        "date": "15 Yanvar, 2026",
+        "title": "Pap-Smear Testi Nə Zaman və Niyə Verilməlidir?"
+      },
+      {
+        "category": "Cərrahiyyə",
+        "date": "20 Yanvar, 2026",
+        "title": "Ginekoloji Onkologiyada Laparoskopiyanın Üstünlükləri"
+      }
+    ]
+  },
+  "about": {
+    "subtitle": "Haqqımda",
+    "title": "Təcrübə və Elmi Yanaşma ilə Qadın Sağlamlığının Xidmətində",
+    "description": "Mən, Dr. Aytən Abdullayeva, uzun illərdir ki, onko-ginekologiya sahəsində həm elmi, həm də praktik fəaliyyətlə məşğul oluram.",
+    "paragraphs": [
+      "Missiyam qadınlarda onkoloji xəstəliklərin erkən diaqnostikasını təmin etmək və ən müasir cərrahi metodlarla sağlamlıqlarını bərpa etməkdir. Tibb üzrə fəlsəfə doktoru olaraq, müalicə prosesində beynəlxalq protokolları rəhbər tuturam.",
+      "Hər bir pasientə fərdi yanaşma, konfidensiallıq və yüksək səviyyəli qayğı müalicə prinsipimin əsasını təşkil edir.",
+      "Müntəzəm olaraq beynəlxalq konfranslarda iştirak edir və onkologiya sahəsindəki ən son yenilikləri təcrübəmdə tətbiq edirəm."
+    ],
+    "stats": [
+      {
+        "suffix": "+",
+        "description": "İllik Təcrübə"
+      },
+      {
+        "suffix": "5000+",
+        "description": "Uğurlu Əməliyyat"
+      },
+      {
+        "suffix": "10k+",
+        "description": "Müayinə Olunan Pasient"
+      },
+      {
+        "suffix": "100%",
+        "description": "Peşəkar Məsuliyyət"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Əlaqə",
+    "email": {
+      "title": "E-poçt",
+      "content": "info@draytenabdullayeva.az"
+    },
+    "phone": {
+      "title": "Qəbul üçün zəng",
+      "content": "+994 (50) 611 37 97"
+    },
+    "office": {
+      "title": "",
+      "content": ""
+    },
+    "liveChat": {
+      "title": "Təcili Sualınız Var?",
+      "text": "Whatsapp vasitəsilə sürətli əlaqə yarada bilərsiniz.",
+      "button": "Whatsapp-da Yaz"
+    },
+    "form": {
+      "title": "Mənə Mesaj Göndərin",
+      "text": "Sualınız və ya şikayətiniz varsa, aşağıdakı formu doldurun, ən qısa zamanda geri dönəcəyəm.",
+      "name": "Tam Adınız",
+      "namePlaceholder": "məs. Günay Məmmədova",
+      "email": "E-poçt Ünvanı",
+      "emailPlaceholder": "məs. gunay@example.com",
+      "subject": "Mövzu",
+      "subjectPlaceholder": "məs. Müayinə haqqında",
+      "phone": "Telefon Nömrəsi",
+      "phonePlaceholder": "məs. 050-000-00-00",
+      "message": "Mesaj",
+      "messagePlaceholder": "Şikayətinizi və ya sualınızı qeyd edin...",
+      "submit": "Göndər",
+      "privacy": "Məxfilik şərtləri ilə razıyam."
+    },
+    "privacyPolicy": "Məxfilik Siyasəti"
+  },
+  "appointment": {
+    "title": "Görüş Təyin Et",
+    "subtitle": "Vaxt itirmədən onlayn növbə götürün. Müayinə üçün uyğun vaxtı seçin.",
+    "form": {
+      "name": "Tam Adınız",
+      "namePlaceholder": "məs. Aysel Məmmədova",
+      "email": "E-poçt Ünvanı",
+      "emailPlaceholder": "məs. aysel@example.com",
+      "phone": "Telefon Nömrəsi",
+      "phonePlaceholder": "məs. 055-000-00-00",
+      "service": "Xidmət Seçin",
+      "servicePlaceholder": "məs. Kolposkopiya",
+      "date": "Tarix",
+      "datePlaceholder": "Tarix Seçin",
+      "time": "Vaxt",
+      "timePlaceholder": "Vaxt Seçin",
+      "doctor": "Həkim",
+      "doctorPlaceholder": "Dr. Aytən Abdullayeva",
+      "notes": "Qeydləriniz",
+      "notesPlaceholder": "Simptomlarınızı və ya əvvəlki diaqnozunuzu qeyd edin",
+      "submit": "Görüşü Təsdiqlə",
+      "services": {
+        "general": "İlkin Müayinə",
+        "healthInsurance": "Sığorta ilə Müayinə",
+        "lifeInsurance": "Onkoloji Check-up"
+      }
+    }
+  },
+  "footer": {
+    "description": "Dr. Aytən Abdullayeva - Onkoloq-Ginekoloq. Qadın sağlamlığının onkoloji və ginekoloji aspektləri üzrə ixtisaslaşmış tibbi xidmət.",
+    "sections": {
+      "company": {
+        "title": "Menyu",
+        "links": {
+          "about": "Haqqımda",
+          "doctors": "Sertifikatlar",
+          "services": "Xidmətlər",
+          "blog": "Bloq",
+          "contact": "Əlaqə"
+        }
+      },
+      "services": {
+        "title": "İxtisaslar",
+        "links": {
+          "general": "Onko-Ginekologiya",
+          "mental": "Kolposkopiya",
+          "derma": "Laparoskopiya",
+          "pediatrics": "Uşaqlıq Boyu Patologiyaları",
+          "chronic": "Onkoloji Nəzarət"
+        }
+      },
+      "support": {
+        "title": "Kömək",
+        "links": {
+          "faq": "Sual-Cavab",
+          "contact": "Əlaqə",
+          "insurance": "Sığorta Təminatı",
+          "technical": "Onlayn Növbə",
+          "privacy": "Məxfilik Siyasəti"
+        }
+      },
+      "contact": {
+        "title": "Əlaqə"
+      }
+    },
+    "app": {
+      "title": ""
+    },
+    "copyright": {
+      "text": "neOtwork 2026",
+      "ownedBy": "tərəfindən bütün hüquqlar qorunur"
+    },
+    "badges": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "faq": {
+    "subtitle": "Tez-tez Verilən Suallar",
+    "title": "Onko-Ginekoloji Müayinə Haqqında",
+    "description": "Müayinə prosesi, analizlər və əməliyyatlarla bağlı ən çox verilən suallara cavablar.",
+    "questions": [
+      {
+        "question": "Onkoloji skrinninq nə qədər vaxt aparır?",
+        "answer": [
+          "İlkin skrinninq (müayinə, kolposkopiya və yaxma götürülməsi) adətən 20-30 dəqiqə çəkir.",
+          "Analizlərin nəticələri laboratoriyadan asılı olaraq 3-5 iş günü ərzində hazır olur."
+        ]
+      },
+      {
+        "question": "Sığorta ilə müayinə mümkündür?",
+        "answer": [
+          "Bəli, əməkdaşlıq etdiyimiz özəl sığorta şirkətləri vasitəsilə onkoloji müayinə və əməliyyatlar mümkündür. Zəhmət olmasa sığorta kartınızı təqdim edin."
+        ]
+      },
+      {
+        "question": "Pap-Smear testi üçün necə hazırlaşmalıyam?",
+        "answer": [
+          "Test menstrual dövr bitdikdən sonra (qanama olmayan günlərdə) edilməlidir. Testdən 48 saat əvvəl cinsi əlaqədən və hər hansı vaginal şam/preparat istifadəsindən qaçınmaq lazımdır."
+        ]
+      },
+      {
+        "question": "Laparoskopik əməliyyatdan sonra bərpa müddəti nə qədərdir?",
+        "answer": [
+          "Laparoskopik (qapalı) əməliyyatın üstünlüyü sürətli bərpadır. Pasient adətən 1 gün sonra evə yazılır və 7-10 gün ərzində normal həyatına qayıdır."
+        ]
+      }
+    ]
+  }
+}

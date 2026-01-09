@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/feedbacks/layout,_N_T_/feedbacks/page,_N_T_/feedbacks/"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/feedbacks/__PAGE__",
+    "/feedbacks",
+    "/_index",
+    "/_head"
+  ]
+}

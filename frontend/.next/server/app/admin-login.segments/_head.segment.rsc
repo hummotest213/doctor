@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[64034,["/_next/static/chunks/41ef3e8e7113f0c2.js","/_next/static/chunks/8a0feb0698c824f9.js"],"ViewportBoundary"]
+3:I[64034,["/_next/static/chunks/41ef3e8e7113f0c2.js","/_next/static/chunks/8a0feb0698c824f9.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+5:I[10548,["/_next/static/chunks/41ef3e8e7113f0c2.js","/_next/static/chunks/8a0feb0698c824f9.js"],"IconMark"]
+0:{"buildId":"s_HgJxQY6V1qWw_H_R3Sh","rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Admin Login"}],["$","meta","1",{"name":"description","content":"Admin Login"}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.62b54b4e.ico","sizes":"100x109","type":"image/x-icon"}],["$","link","3",{"rel":"icon","href":"/images/favicon.svg"}],["$","$L5","4",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"loading":null,"isPartial":false}

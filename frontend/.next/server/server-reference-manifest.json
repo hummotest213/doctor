@@ -1,0 +1,139 @@
+{
+  "node": {
+    "4062ddfc17a9bfe6110a71c94318b606517194026b": {
+      "workers": {
+        "app/blogs/classic/page": {
+          "moduleId": 27358,
+          "async": false,
+          "exportedName": "handleBlogSearch",
+          "filename": "OneDrive/Pictures/testing-server/frontend/src/actions/blogActions.ts"
+        },
+        "app/blogs/three/page": {
+          "moduleId": 44948,
+          "async": false,
+          "exportedName": "handleBlogSearch",
+          "filename": "OneDrive/Pictures/testing-server/frontend/src/actions/blogActions.ts"
+        },
+        "app/blogs/two/page": {
+          "moduleId": 75012,
+          "async": false,
+          "exportedName": "handleBlogSearch",
+          "filename": "OneDrive/Pictures/testing-server/frontend/src/actions/blogActions.ts"
+        }
+      },
+      "layer": {
+        "app/blogs/classic/page": "action-browser",
+        "app/blogs/three/page": "action-browser",
+        "app/blogs/two/page": "action-browser"
+      },
+      "filename": "OneDrive/Pictures/testing-server/frontend/src/actions/blogActions.ts",
+      "exportedName": "handleBlogSearch"
+    },
+    "40492e4fad1c9281806b7ce088e89dc7d6abdf78a6": {
+      "workers": {
+        "app/blogs/classic/page": {
+          "moduleId": 27358,
+          "async": false,
+          "exportedName": "handleSubscribe",
+          "filename": "OneDrive/Pictures/testing-server/frontend/src/actions/subscribe.ts"
+        },
+        "app/blogs/three/page": {
+          "moduleId": 44948,
+          "async": false,
+          "exportedName": "handleSubscribe",
+          "filename": "OneDrive/Pictures/testing-server/frontend/src/actions/subscribe.ts"
+        },
+        "app/blogs/two/page": {
+          "moduleId": 75012,
+          "async": false,
+          "exportedName": "handleSubscribe",
+          "filename": "OneDrive/Pictures/testing-server/frontend/src/actions/subscribe.ts"
+        }
+      },
+      "layer": {
+        "app/blogs/classic/page": "action-browser",
+        "app/blogs/three/page": "action-browser",
+        "app/blogs/two/page": "action-browser"
+      },
+      "filename": "OneDrive/Pictures/testing-server/frontend/src/actions/subscribe.ts",
+      "exportedName": "handleSubscribe"
+    },
+    "40b5e26531bb57dc9cc65071b1cf7a415a56f411ed": {
+      "workers": {
+        "app/book-an-appointment/page": {
+          "moduleId": 46088,
+          "async": false,
+          "exportedName": "handleAppointment",
+          "filename": "OneDrive/Pictures/testing-server/frontend/src/actions/appointment.ts"
+        }
+      },
+      "layer": {
+        "app/book-an-appointment/page": "action-browser"
+      },
+      "filename": "OneDrive/Pictures/testing-server/frontend/src/actions/appointment.ts",
+      "exportedName": "handleAppointment"
+    },
+    "407ed2af27ce14c882ff28180138bd436c7167d0f1": {
+      "workers": {
+        "app/contact-us/page": {
+          "moduleId": 14909,
+          "async": false,
+          "exportedName": "handleContact",
+          "filename": "OneDrive/Pictures/testing-server/frontend/src/actions/contact.ts"
+        }
+      },
+      "layer": {
+        "app/contact-us/page": "action-browser"
+      },
+      "filename": "OneDrive/Pictures/testing-server/frontend/src/actions/contact.ts",
+      "exportedName": "handleContact"
+    },
+    "40d80ffd54e8cccee4cf1b6f81d0be7fb41335d943": {
+      "workers": {
+        "app/forgot-password/page": {
+          "moduleId": 46851,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_ACTION_0",
+          "filename": "OneDrive/Pictures/testing-server/frontend/src/components/Auth/ForgotPasswordForm.tsx"
+        }
+      },
+      "layer": {
+        "app/forgot-password/page": "rsc"
+      },
+      "filename": "OneDrive/Pictures/testing-server/frontend/src/components/Auth/ForgotPasswordForm.tsx",
+      "exportedName": "$$RSC_SERVER_ACTION_0"
+    },
+    "4067624da39579652cce69eb2c884ff04b96220327": {
+      "workers": {
+        "app/login/page": {
+          "moduleId": 25542,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_ACTION_0",
+          "filename": "OneDrive/Pictures/testing-server/frontend/src/components/Auth/LoginForm.tsx"
+        }
+      },
+      "layer": {
+        "app/login/page": "rsc"
+      },
+      "filename": "OneDrive/Pictures/testing-server/frontend/src/components/Auth/LoginForm.tsx",
+      "exportedName": "$$RSC_SERVER_ACTION_0"
+    },
+    "408dfd525bd67bc544ee30154333f8cccc03a603a4": {
+      "workers": {
+        "app/register/page": {
+          "moduleId": 17350,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_ACTION_0",
+          "filename": "OneDrive/Pictures/testing-server/frontend/src/components/Auth/RegisterForm.tsx"
+        }
+      },
+      "layer": {
+        "app/register/page": "rsc"
+      },
+      "filename": "OneDrive/Pictures/testing-server/frontend/src/components/Auth/RegisterForm.tsx",
+      "exportedName": "$$RSC_SERVER_ACTION_0"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "8GDcz62Ha/HPSqScr6W2xPDf93ThbCpia9e8qsTFr4U="
+}

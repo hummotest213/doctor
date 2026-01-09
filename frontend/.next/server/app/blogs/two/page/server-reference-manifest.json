@@ -1,0 +1,35 @@
+{
+  "node": {
+    "4062ddfc17a9bfe6110a71c94318b606517194026b": {
+      "workers": {
+        "app/blogs/two/page": {
+          "moduleId": 75012,
+          "async": false,
+          "exportedName": "handleBlogSearch",
+          "filename": "OneDrive/Pictures/testing-server/frontend/src/actions/blogActions.ts"
+        }
+      },
+      "layer": {
+        "app/blogs/two/page": "action-browser"
+      },
+      "exportedName": "handleBlogSearch",
+      "filename": "OneDrive/Pictures/testing-server/frontend/src/actions/blogActions.ts"
+    },
+    "40492e4fad1c9281806b7ce088e89dc7d6abdf78a6": {
+      "workers": {
+        "app/blogs/two/page": {
+          "moduleId": 75012,
+          "async": false,
+          "exportedName": "handleSubscribe",
+          "filename": "OneDrive/Pictures/testing-server/frontend/src/actions/subscribe.ts"
+        }
+      },
+      "layer": {
+        "app/blogs/two/page": "action-browser"
+      },
+      "exportedName": "handleSubscribe",
+      "filename": "OneDrive/Pictures/testing-server/frontend/src/actions/subscribe.ts"
+    }
+  },
+  "edge": {}
+}

@@ -1,0 +1,20 @@
+{
+  "node": {
+    "40d80ffd54e8cccee4cf1b6f81d0be7fb41335d943": {
+      "workers": {
+        "app/forgot-password/page": {
+          "moduleId": 46851,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_ACTION_0",
+          "filename": "OneDrive/Pictures/testing-server/frontend/src/components/Auth/ForgotPasswordForm.tsx"
+        }
+      },
+      "layer": {
+        "app/forgot-password/page": "rsc"
+      },
+      "exportedName": "$$RSC_SERVER_ACTION_0",
+      "filename": "OneDrive/Pictures/testing-server/frontend/src/components/Auth/ForgotPasswordForm.tsx"
+    }
+  },
+  "edge": {}
+}

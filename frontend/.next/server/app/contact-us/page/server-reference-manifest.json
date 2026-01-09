@@ -1,0 +1,20 @@
+{
+  "node": {
+    "407ed2af27ce14c882ff28180138bd436c7167d0f1": {
+      "workers": {
+        "app/contact-us/page": {
+          "moduleId": 14909,
+          "async": false,
+          "exportedName": "handleContact",
+          "filename": "OneDrive/Pictures/testing-server/frontend/src/actions/contact.ts"
+        }
+      },
+      "layer": {
+        "app/contact-us/page": "action-browser"
+      },
+      "exportedName": "handleContact",
+      "filename": "OneDrive/Pictures/testing-server/frontend/src/actions/contact.ts"
+    }
+  },
+  "edge": {}
+}

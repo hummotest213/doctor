@@ -1,0 +1,20 @@
+{
+  "node": {
+    "408dfd525bd67bc544ee30154333f8cccc03a603a4": {
+      "workers": {
+        "app/register/page": {
+          "moduleId": 17350,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_ACTION_0",
+          "filename": "OneDrive/Pictures/testing-server/frontend/src/components/Auth/RegisterForm.tsx"
+        }
+      },
+      "layer": {
+        "app/register/page": "rsc"
+      },
+      "exportedName": "$$RSC_SERVER_ACTION_0",
+      "filename": "OneDrive/Pictures/testing-server/frontend/src/components/Auth/RegisterForm.tsx"
+    }
+  },
+  "edge": {}
+}
