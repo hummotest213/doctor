@@ -1,0 +1,178 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String     @id @default(uuid())
+  email     String     @unique
+  password  String
+  role      UserRole   @default(ADMIN)
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+
+  @@index([email])
+}
+
+enum UserRole {
+  ADMIN
+  EDITOR
+  VIEWER
+}
+
+model Doctor {
+  id            String      @id @default(uuid())
+  slug          String      @unique
+  imageUrl      String?
+  specialties   String[]    @default([])
+  experience    Int?
+  qualifications String[]   @default([])
+  translations  Translation[]
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  @@index([slug])
+  @@map("doctors")
+}
+
+model Service {
+  id           String      @id @default(uuid())
+  slug         String      @unique
+  iconUrl      String?
+  order        Int?
+  translations Translation[]
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+
+  @@index([slug])
+  @@map("services")
+}
+
+model Testimonial {
+  id           String      @id @default(uuid())
+  authorName   String
+  authorImage  String?
+  authorRole   String?
+  rating       Float?      @default(5)
+  translations Translation[]
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+
+  @@map("testimonials")
+}
+
+model SiteSettings {
+  id           String      @id @default(uuid())
+  key          String      @unique
+  value        String
+  description  String?
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+
+  @@index([key])
+  @@map("site_settings")
+}
+
+model Translation {
+  id           String   @id @default(uuid())
+  language     Language
+  field        String   // e.g., "title", "description", "bio", "content"
+  value        String   @db.Text
+  
+  // Polymorphic relationship handling
+  doctorId     String?
+  doctor       Doctor?  @relation(fields: [doctorId], references: [id], onDelete: Cascade)
+  
+  serviceId    String?
+  service      Service? @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  
+  testimonialId String?
+  testimonial   Testimonial? @relation(fields: [testimonialId], references: [id], onDelete: Cascade)
+  
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@unique([language, field, doctorId, serviceId, testimonialId])
+  @@index([doctorId])
+  @@index([serviceId])
+  @@index([testimonialId])
+  @@index([language])
+  @@map("translations")
+}
+
+enum Language {
+  en
+  az
+  ru
+}
+
+model Blog {
+  id           String      @id @default(uuid())
+  slug         String      @unique
+  featuredImage String?
+  author       String?
+  views        Int         @default(0)
+  translations Translation[]
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+
+  @@index([slug])
+  @@map("blogs")
+}
+
+model ContactSubmission {
+  id        String   @id @default(uuid())
+  name      String
+  email     String
+  phone     String?
+  subject   String?
+  message   String   @db.Text
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([email])
+  @@index([createdAt])
+  @@map("contact_submissions")
+}
+
+model Appointment {
+  id           String   @id @default(uuid())
+  patientName  String
+  patientEmail String
+  patientPhone String
+  doctorId     String?
+  serviceId    String?
+  date         DateTime
+  timeSlot     String?
+  notes        String?  @db.Text
+  status       AppointmentStatus @default(PENDING)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([patientEmail])
+  @@index([date])
+  @@index([status])
+  @@map("appointments")
+}
+
+enum AppointmentStatus {
+  PENDING
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+}
+
+model Newsletter {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+
+  @@map("newsletters")
+}

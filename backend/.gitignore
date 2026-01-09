@@ -1,0 +1,17 @@
+node_modules
+dist
+.env
+.env.local
+.env.*.local
+.DS_Store
+*.pem
+*.log
+yarn-error.log
+.idea
+.vscode
+*.swp
+*.swo
+*~
+.env.production.local
+coverage
+.nyc_output

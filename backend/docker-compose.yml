@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: doctor_portal_db
+    environment:
+      POSTGRES_USER: doctor_user
+      POSTGRES_PASSWORD: doctor_password
+      POSTGRES_DB: doctor_portal
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U doctor_user"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: .
+    container_name: doctor_portal_backend
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://doctor_user:doctor_password@postgres:5432/doctor_portal
+      NODE_ENV: production
+      PORT: 5000
+      JWT_SECRET: your_super_secret_jwt_key_min_32_characters_long
+      FRONTEND_URL: http://localhost:3000
+      ALLOWED_ORIGINS: http://localhost:3000,http://localhost:3001
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: >
+      sh -c "npx prisma migrate deploy && npx prisma db seed && node dist/server.js"
+
+volumes:
+  postgres_data:
