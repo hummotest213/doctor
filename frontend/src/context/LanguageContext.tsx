@@ -30,26 +30,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   // Load translations when language changes
   useEffect(() => {
     const loadTranslations = async () => {
-      try {
-        // Get API URL from environment - use new Render backend
-        const apiBaseUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000';
-        
-        // Try to fetch from backend first
-        const response = await fetch(`${apiBaseUrl}/api/languages/${language}`);
-        if (response.ok) {
-          const data = await response.json();
-          // Check if we got actual data (not empty object)
-          if (Object.keys(data).length > 0) {
-            setTranslations(data);
-            console.log(`[LanguageContext] Translations loaded from backend for ${language}`, Object.keys(data).length, 'keys');
-            return;
-          }
-        }
-      } catch (error) {
-        console.error(`[LanguageContext] Failed to fetch translations from backend for ${language}:`, error);
-      }
-      
-      // Fallback: try to load from local messages
+      // Load from local JSON files directly (backend doesn't have /languages endpoint)
       try {
         let messages;
         if (language === 'az') {
@@ -62,10 +43,10 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
         
         if (messages) {
           setTranslations(messages.default);
-          console.log(`[LanguageContext] Using fallback local translations for ${language}`, Object.keys(messages.default).length, 'keys');
+          console.log(`[LanguageContext] Loaded local translations for ${language}`, Object.keys(messages.default).length, 'keys');
         }
-      } catch (fallbackError) {
-        console.error(`[LanguageContext] Fallback also failed for ${language}:`, fallbackError);
+      } catch (error) {
+        console.error(`[LanguageContext] Failed to load translations for ${language}:`, error);
       }
     };
 
