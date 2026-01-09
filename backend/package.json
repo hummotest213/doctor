@@ -13,6 +13,9 @@
     "prisma:seed": "ts-node prisma/seed.ts",
     "migrate:from-json": "ts-node src/scripts/migrateFromJson.ts"
   },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
   "keywords": [
     "doctor",
     "portal",

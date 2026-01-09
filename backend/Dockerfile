@@ -38,6 +38,12 @@ COPY prisma ./prisma
 # Generate Prisma client
 RUN npx prisma generate
 
+# Run migrations
+RUN npx prisma migrate deploy
+
+# Seed database with initial data
+RUN npx prisma db seed || true
+
 # Expose port
 EXPOSE 5000
 
