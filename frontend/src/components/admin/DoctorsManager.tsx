@@ -86,11 +86,11 @@ export const DoctorsManager: React.FC<DoctorsManagerProps> = ({ language, showAl
         imageUrl: formData.imageUrl,
         specialties: Array.isArray(formData.specialties) 
           ? formData.specialties 
-          : formData.specialties.toString().split(',').map(s => s.trim()),
-        experience: parseInt(formData.experience.toString()),
+          : String(formData.specialties).split(',').map(s => s.trim()),
+        experience: parseInt(String(formData.experience)),
         qualifications: Array.isArray(formData.qualifications)
           ? formData.qualifications
-          : formData.qualifications.toString().split(',').map(q => q.trim()),
+          : String(formData.qualifications).split(',').map(q => q.trim()),
         translations,
       };
 
