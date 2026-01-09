@@ -27,14 +27,14 @@ export const getDoctors = async (req: LocalizedRequest, res: Response) => {
 
     const total = await prisma.doctor.count();
 
-    const formattedDoctors = doctors.map((doctor) => ({
+    const formattedDoctors = doctors.map((doctor: any) => ({
       id: doctor.id,
       slug: doctor.slug,
       imageUrl: doctor.imageUrl,
       specialties: doctor.specialties,
       experience: doctor.experience,
       qualifications: doctor.qualifications,
-      ...doctor.translations.reduce((acc, t) => ({ ...acc, [t.field]: t.value }), {}),
+      ...doctor.translations.reduce((acc: any, t: any) => ({ ...acc, [t.field]: t.value }), {}),
     }));
 
     return sendPaginated(res, formattedDoctors, total, page, pageSize);
@@ -70,7 +70,7 @@ export const getDoctorBySlug = async (req: LocalizedRequest, res: Response) => {
       specialties: doctor.specialties,
       experience: doctor.experience,
       qualifications: doctor.qualifications,
-      ...doctor.translations.reduce((acc, t) => ({ ...acc, [t.field]: t.value }), {}),
+      ...doctor.translations.reduce((acc: any, t: any) => ({ ...acc, [t.field]: t.value }), {}),
     };
 
     return sendSuccess(res, formattedDoctor);

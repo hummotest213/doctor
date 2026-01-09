@@ -8,12 +8,13 @@ export interface AuthenticatedRequest extends Request {
   role?: string;
 }
 
-export const authMiddleware = (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
+export const authMiddleware = (req: AuthenticatedRequest, res: Response, next: NextFunction): void => {
   try {
     const token = req.headers.authorization?.split(' ')[1]; // Bearer token
 
     if (!token) {
-      return res.status(401).json({ error: 'No authentication token provided' });
+      res.status(401).json({ error: 'No authentication token provided' });
+      return;
     }
 
     const decoded = jwt.verify(token, config.jwt.secret) as any;
@@ -23,13 +24,15 @@ export const authMiddleware = (req: AuthenticatedRequest, res: Response, next: N
 
     next();
   } catch (error) {
-    return res.status(401).json({ error: 'Invalid or expired token' });
+    res.status(401).json({ error: 'Invalid or expired token' });
+    return;
   }
 };
 
-export const requireAdmin = (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
+export const requireAdmin = (req: AuthenticatedRequest, res: Response, next: NextFunction): void => {
   if (req.role !== 'ADMIN') {
-    return res.status(403).json({ error: 'Admin privileges required' });
+    res.status(403).json({ error: 'Admin privileges required' });
+    return;
   }
-  next();
+  next()
 };

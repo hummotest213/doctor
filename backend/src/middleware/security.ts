@@ -1,7 +1,7 @@
 import { Response, NextFunction } from 'express';
 import config from '../config/index';
 
-export const corsMiddleware = (req: any, res: Response, next: NextFunction) => {
+export const corsMiddleware = (req: any, res: Response, next: NextFunction): void => {
   const origin = req.headers.origin;
 
   if (config.cors.allowedOrigins.includes(origin)) {
@@ -15,7 +15,8 @@ export const corsMiddleware = (req: any, res: Response, next: NextFunction) => {
 
   // Handle preflight requests
   if (req.method === 'OPTIONS') {
-    return res.sendStatus(204);
+    res.sendStatus(204);
+    return;
   }
 
   next();

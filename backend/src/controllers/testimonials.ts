@@ -27,13 +27,13 @@ export const getTestimonials = async (req: LocalizedRequest, res: Response) => {
 
     const total = await prisma.testimonial.count();
 
-    const formattedTestimonials = testimonials.map((testimonial) => ({
+    const formattedTestimonials = testimonials.map((testimonial: any) => ({
       id: testimonial.id,
       authorName: testimonial.authorName,
       authorImage: testimonial.authorImage,
       authorRole: testimonial.authorRole,
       rating: testimonial.rating,
-      ...testimonial.translations.reduce((acc, t) => ({ ...acc, [t.field]: t.value }), {}),
+      ...testimonial.translations.reduce((acc: any, t: any) => ({ ...acc, [t.field]: t.value }), {}),
     }));
 
     return sendPaginated(res, formattedTestimonials, total, page, pageSize);

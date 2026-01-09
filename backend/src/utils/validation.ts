@@ -1,7 +1,8 @@
-import { body, validationResult, Request, Response, NextFunction } from 'express-validator';
+import { body, validationResult } from 'express-validator';
+import { Request, Response, NextFunction } from 'express';
 
 export const validate = (validations: any[]) => {
-  return async (req: Request, res: Response, next: NextFunction) => {
+  return async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     for (let validation of validations) {
       const result = await validation.run(req);
       if (!result.success) {
@@ -11,11 +12,12 @@ export const validate = (validations: any[]) => {
 
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.status(400).json({
+      res.status(400).json({
         success: false,
         error: 'Validation failed',
         details: errors.array(),
       });
+      return;
     }
     next();
   };

@@ -11,7 +11,7 @@ export const getSettings = async (req: AuthenticatedRequest, res: Response) => {
     const settings = await prisma.siteSettings.findMany();
 
     const formatted = settings.reduce(
-      (acc, setting) => ({
+      (acc: any, setting: any) => ({
         ...acc,
         [setting.key]: setting.value,
       }),

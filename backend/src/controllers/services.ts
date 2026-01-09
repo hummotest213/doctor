@@ -28,12 +28,12 @@ export const getServices = async (req: LocalizedRequest, res: Response) => {
 
     const total = await prisma.service.count();
 
-    const formattedServices = services.map((service) => ({
+    const formattedServices = services.map((service: any) => ({
       id: service.id,
       slug: service.slug,
       iconUrl: service.iconUrl,
       order: service.order,
-      ...service.translations.reduce((acc, t) => ({ ...acc, [t.field]: t.value }), {}),
+      ...service.translations.reduce((acc: any, t: any) => ({ ...acc, [t.field]: t.value }), {}),
     }));
 
     return sendPaginated(res, formattedServices, total, page, pageSize);
@@ -67,7 +67,7 @@ export const getServiceBySlug = async (req: LocalizedRequest, res: Response) => 
       slug: service.slug,
       iconUrl: service.iconUrl,
       order: service.order,
-      ...service.translations.reduce((acc, t) => ({ ...acc, [t.field]: t.value }), {}),
+      ...service.translations.reduce((acc: any, t: any) => ({ ...acc, [t.field]: t.value }), {}),
     };
 
     return sendSuccess(res, formattedService);

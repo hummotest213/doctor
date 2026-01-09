@@ -16,7 +16,7 @@ export const generateToken = (userId: string, email: string, role: string): stri
   return jwt.sign(
     { userId, email, role },
     config.jwt.secret,
-    { expiresIn: config.jwt.expiry }
+    { expiresIn: config.jwt.expiry as unknown as jwt.SignOptions['expiresIn'] }
   );
 };
 
