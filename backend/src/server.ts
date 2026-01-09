@@ -1,5 +1,6 @@
 import express, { Request, Response } from 'express';
 import { PrismaClient } from '@prisma/client';
+import { execSync } from 'child_process';
 import config from './config/index';
 import { corsMiddleware, securityHeaders } from './middleware/security';
 import authRoutes from './routes/auth';
@@ -12,6 +13,21 @@ import { createAdmin } from './controllers/auth';
 
 const app = express();
 const prisma = new PrismaClient();
+
+// Run migrations at startup
+const runMigrations = async () => {
+  try {
+    console.log('🔄 Running Prisma migrations...');
+    execSync('npx prisma migrate deploy', { 
+      stdio: 'inherit',
+      env: { ...process.env }
+    });
+    console.log('✅ Migrations completed');
+  } catch (error: any) {
+    console.warn('⚠️  Migration warning (may be expected):', error.message);
+    // Don't fail - migrations might already be applied
+  }
+};
 
 // Middleware
 app.use(express.json({ limit: '10mb' }));
@@ -98,17 +114,20 @@ app.use((err: any, req: Request, res: Response) => {
 const PORT = config.server.port;
 const startServer = async () => {
   try {
-    // Initialize database
+    // Run migrations first
+    await runMigrations();
+
+    // Then initialize database (create admin user if needed)
     await initializeDatabase();
 
     // Start server
     app.listen(PORT, () => {
-      console.log(`Server running on http://localhost:${PORT}`);
-      console.log(`Environment: ${config.server.nodeEnv}`);
-      console.log(`Admin email: ${config.auth.adminEmail}`);
+      console.log(`✅ Server running on http://localhost:${PORT}`);
+      console.log(`📧 Admin email: ${config.auth.adminEmail}`);
+      console.log(`🗄️  Database: ${config.database.url.split('@')[1] || 'local'}`);
     });
-  } catch (error) {
-    console.error('Failed to start server:', error);
+  } catch (error: any) {
+    console.error('❌ Failed to start server:', error.message);
     process.exit(1);
   }
 };

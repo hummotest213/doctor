@@ -38,12 +38,6 @@ COPY prisma ./prisma
 # Generate Prisma client
 RUN npx prisma generate
 
-# Run migrations
-RUN npx prisma migrate deploy
-
-# Seed database with initial data
-RUN npx prisma db seed || true
-
 # Expose port
 EXPOSE 5000
 
@@ -51,5 +45,5 @@ EXPOSE 5000
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
   CMD curl -f http://localhost:5000/health || exit 1
 
-# Start application
+# Start application - migrations will run at startup
 CMD ["node", "dist/server.js"]
