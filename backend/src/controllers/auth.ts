@@ -11,20 +11,26 @@ export const login = async (req: any, res: Response) => {
   try {
     const { email, password } = req.body;
 
+    console.log(`🔐 Login attempt for: ${email}`);
+
     const user = await prisma.user.findUnique({ where: { email } });
     if (!user) {
+      console.log(`❌ User not found: ${email}`);
       return sendError(res, 401, 'Invalid email or password');
     }
 
     const isPasswordValid = await comparePasswords(password, user.password);
     if (!isPasswordValid) {
+      console.log(`❌ Invalid password for user: ${email}`);
       return sendError(res, 401, 'Invalid email or password');
     }
 
     const token = generateToken(user.id, user.email, user.role);
+    console.log(`✅ Login successful for: ${email}`);
     return sendSuccess(res, { token, user: { id: user.id, email: user.email, role: user.role } }, 200);
   } catch (error: any) {
-    return sendError(res, 500, error.message);
+    console.error('❌ Login error:', error);
+    return sendError(res, 500, `Login failed: ${error.message}`);
   }
 };
 
